@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
         padding: 8,
         paddingLeft: 12,
         justifyContent: "flex-start", // main axis
-        backgroundColor: '#fff',
+        backgroundColor: COLORS.headerbgcolor,
+        paddingBottom: 12
     },
     title: {
         fontSize: 18,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 14,
         fontWeight: '700',
-        color: '#d1d1d1',
+        color: COLORS.subtitle,
         paddingLeft: 5
     }
 

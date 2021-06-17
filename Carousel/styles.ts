@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native'
-
+import { COLORS, SIZES } from '../styles/Theme'
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
-    borderColor: '#ebebeb',
+    borderColor: COLORS.carouselbordercolor,
     borderWidth: 0,
     borderRadius: 8,
-    shadowColor: '#fcfcfc',
+    shadowColor: COLORS.carouselshadowcolor,
     shadowOpacity: 1,
     marginTop: 1,
     shadowOffset: {

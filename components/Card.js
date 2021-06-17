@@ -35,7 +35,7 @@ const Card = (props) => {
         <View style={styles.container_bottom_center}>
           <View style={styles.container_bottom_center_sub}>
             <View>
-              <Entypo name={"calendar"} color={'#045FB4'} size={20} />
+              <Entypo name={"calendar"} color={COLORS.cardiconcolor} size={20} />
             </View>
             <View style={styles.container_bottom_center_sub2}>
               <Text style={styles.info_title}>Date purchased</Text>
@@ -44,7 +44,7 @@ const Card = (props) => {
           </View>
           <View style={styles.container_bottom_center_sub}>
             <View>
-              <Entypo name={"ticket"} color={'#045FB4'} size={20} />
+              <Entypo name={"ticket"} color={COLORS.cardiconcolor} size={20} />
             </View>
             <View style={styles.container_bottom_center_sub2}>
               <Text style={styles.info_title}>Ticket(s) bought</Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     width: SIZES.width * 0.90,
     borderRadius: 7,
     borderWidth: 1,
-    borderColor: '#efeded',
+    borderColor: COLORS.cardbordercolor,
     marginBottom: 10,
     justifyContent: "center", // main axis
     alignItems: "center", // cross axis
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 7,
     paddingBottom: 10,
     justifyContent: "center", // main axis
-    backgroundColor: '#F8FBEF',
+    backgroundColor: COLORS.cardtopbgcolor,
   },
   container_sub: {
     flexDirection: 'row',
@@ -91,22 +91,23 @@ const styles = StyleSheet.create({
     width: SIZES.width * 0.10, borderTopLeftRadius: 7,
   },
   container_top_right: {
-    width: SIZES.width * 0.149, borderTopRightRadius: 7, alignItems: 'flex-end',
+    width: SIZES.width * 0.149, borderTopRightRadius: 7, alignItems: 'flex-end', paddingRight: 1
   },
   container_top_right_circle: {
     borderRadius: 100,
     borderTopRightRadius: 7, borderBottomRightRadius: 7,
     borderTopLeftRadius: 7, width: 45, height: 40,
-    backgroundColor: '#fff', borderColor: '#efeded',
+    backgroundColor: COLORS.cardidbgcolor,
+    borderColor: COLORS.cardidbordercolor,
     borderLeftWidth: 1, borderBottomWidth: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   top_right_circle_text: {
-    color: 'red', fontWeight: 'bold'
+    color: COLORS.cardidtext, fontWeight: 'bold'
   },
   container_bottom_left: {
-    width: SIZES.width * 0.20, borderBottomLeftRadius: 7, alignItems: 'center',
+    width: SIZES.width * 0.20, borderBottomLeftRadius: 7, alignItems: 'center', justifyContent: 'center'
   },
   container_bottom_right: {
     width: SIZES.width * 0.298, borderBottomEndRadius: 7, alignItems: 'center',
@@ -127,20 +128,20 @@ const styles = StyleSheet.create({
   ref_text: {
     fontSize: 12,
     fontWeight: 'bold',
-    color: '#c0c0c0'
+    color: COLORS.reftext
   },
   info_title: {
-    fontSize: 7, fontWeight: '300', color: '#084B8A'
+    fontSize: 7, fontWeight: '300', color: COLORS.infotitle
   },
   info_value: {
-    fontSize: 10, fontWeight: 'bold', color: '#c0c0c0'
+    fontSize: 10, fontWeight: 'bold', color: COLORS.infovalue
   },
   ref_sub_text: {
-    color: '#DF0101',
+    color: COLORS.refsubtext1,
     fontWeight: 'bold', fontSize: 14
   },
   ref_sub_text2: {
-    color: '#113d88'
+    color: COLORS.refsubtext2,
   },
   bottom_left_image: {
     width: 50,
@@ -151,7 +152,6 @@ const styles = StyleSheet.create({
     height: 70,
     marginTop: -20,
     resizeMode: 'stretch',
-
   }
 });
 export default Card;

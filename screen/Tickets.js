@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, ImageBackground, TouchableOpacity, ScrollView } from 'react-native';
 import Header from '../components/Header'
 import CommonStyle from '../styles/CommonStyle'
 import { COLORS, SIZES } from '../styles/Theme'
@@ -17,7 +17,9 @@ const Tickets = (props) => {
       <View style={CommonStyle.v_container}>
         <Header {...headervalue} />
         <View style={styles.container}>
-          <TicketList />
+          <ScrollView>
+            <TicketList />
+          </ScrollView>
         </View>
         <View style={styles.button_container}>
           <TouchableOpacity style={styles.button}>
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     width: SIZES.width,
     flex: 1,
-    padding: SIZES.width * 0.05,
+    padding: SIZES.width * 0.04,
     justifyContent: "flex-start", // main axis
     alignItems: "center", // cross axis
   },
@@ -45,10 +47,10 @@ const styles = StyleSheet.create({
     alignItems: 'center', paddingBottom: 5
   },
   button_text: {
-    color: '#fff', fontWeight: 'bold'
+    color: COLORS.buttontext, fontWeight: 'bold'
   },
   button: {
-    backgroundColor: '#1e90ff',
+    backgroundColor: COLORS.buttonbgcolor,
     borderRadius: 20,
     padding: 10
   }
